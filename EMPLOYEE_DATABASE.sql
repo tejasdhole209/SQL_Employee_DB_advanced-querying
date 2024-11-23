@@ -54,7 +54,7 @@ WHERE Age>30
 GROUP BY Gender
 ORDER BY Number DESC;
 
-SELECT ED.Gender, MAX(ES.Salary) as MaximumSalary FROM ED as ED LEFT OUTER JOIN EmployeeSalary as ES
+SELECT ED.Gender, MAX(ES.Salary) as MaximumSalary FROM EmployeeDemographics as ED LEFT OUTER JOIN EmployeeSalary as ES
 ON ED.EmployeeID=ES.EmployeeID
 Group by ED.Gender
 Order by MaximumSalary DESC;
